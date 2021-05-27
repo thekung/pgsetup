@@ -62,3 +62,14 @@ If you want to run PostgreSQL as a service, you should run the following command
 pg_ctl register -N "postgresql" -U "NT AUTHORITY\NetworkService" -D "C:/pgsql/data" -w
 ```
 After you have done this, you can start the service by using the Services panel.
+
+# How to diable pgAdmin check update
+To disable pgAdmin check new update just open the file "C:\\pgsql\pgAdmin 4\web\config .py"   
+Search for this:
+```
+UPGRADE_CHECK_ENABLED = true
+```
+Replace with this:
+```
+UPGRADE_CHECK_ENABLED = false
+```
